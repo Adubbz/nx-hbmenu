@@ -246,7 +246,7 @@ void menuLoop() {
         static int v = 0;
         int wanted_x = - menu->curEntry * (140 + 40);
         x += v;
-        v += (wanted_x - x) / 2;
+        v += (wanted_x - x) / 3;
         v /= 2;
 
         // Draw menu entries
