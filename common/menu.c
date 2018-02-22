@@ -245,10 +245,7 @@ void menuLoop() {
         static int x = 0;
         static int v = 0;
 
-    //        if (menu->curEntry < menu->nEntries - 6 || v != 0 || menu->firstEntry + 7 >= menu->nEntries) {
-
         int wanted_x = clamp(-menu->curEntry * (140 + 40), -(menu->nEntries - 7) * (140 + 40), 0);
-
         x += v;
         v += (wanted_x - x) / 3;
         v /= 2;
