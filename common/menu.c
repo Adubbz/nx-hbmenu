@@ -244,11 +244,14 @@ void menuLoop() {
     {
         static int x = 0;
         static int v = 0;
-        int wanted_x = - menu->curEntry * (140 + 40);
-        x += v;
-        v += (wanted_x - x) / 3;
-        v /= 2;
 
+        if (menu->curEntry < menu->nEntries - 6 || v != 0) {
+            int wanted_x = - menu->curEntry * (140 + 40);
+            x += v;
+            v += (wanted_x - x) / 3;
+            v /= 2;
+        }
+        
         // Draw menu entries
         for (me = menu->firstEntry, i = 0; me; me = me->next, i ++) {
             int entry_start_x = 32 + i * (140 + 40);
