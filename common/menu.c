@@ -197,7 +197,7 @@ static void drawEntry(menuEntry_s* me, int off_x, int is_active) {
             drawImage(1280 - 126, 720 - 48, 32, 32, themeCurrent.buttonAImage, IMAGE_MODE_RGBA32);
             DrawText(tahoma12, 1280 - 90, 720 - 44, themeCurrent.textColor, "Launch");
         }
-        else if (me->type != ENTRY_TYPE_FOLDER) {
+        else {
             drawImage(1280 - 126, 720 - 48, 32, 32, themeCurrent.buttonAImage, IMAGE_MODE_RGBA32);
             DrawText(tahoma12, 1280 - 90, 720 - 44, themeCurrent.textColor, "Open");
         }
