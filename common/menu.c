@@ -195,7 +195,7 @@ static void drawEntry(menuEntry_s* me, int off_x, int is_active) {
             DrawText(interuiregular14, start_x + 256 + 64, start_y + 28 + 30 + 18 + 6, themeCurrent.textColor, tmpstr);  
                          
             drawImage(1280 - 126 - 20, 720 - 48, 32, 32, themeCurrent.buttonAImage, IMAGE_MODE_RGBA32);
-            DrawText(interuimedium20, 1280 - 90 - 20, 720 - 46, themeCurrent.textColor, "Launch");
+            DrawText(interuimedium20, 1280 - 90 - 20, 720 - 47, themeCurrent.textColor, "Launch");
         }
         else {
             drawImage(1280 - 126 - 20, 720 - 48, 32, 32, themeCurrent.buttonAImage, IMAGE_MODE_RGBA32);
