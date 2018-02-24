@@ -293,7 +293,7 @@ void menuLoop() {
 
     drawImage(40, 20, 140, 60, themeCurrent.hbmenuLogoImage, IMAGE_MODE_RGBA32);
     DrawText(interuiregular14, 180, 46, themeCurrent.textColor, "v2.0.0");
-    DrawText(interuiregular18, 40, 720 - 48, themeCurrent.textColor, menu->dirname);
+    DrawText(interuiregular18, 40, 720 - 44, themeCurrent.textColor, menu->dirname);
 
     //drawTime();
 
