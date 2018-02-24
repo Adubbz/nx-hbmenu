@@ -50,7 +50,7 @@ uint8_t *switchicon_questionmark_small;
 
 static void drawEntry(menuEntry_s* me, int off_x, int is_active) {
     int x, y;
-    int start_y = 720 - 100 - 140;//*(n % 2);
+    int start_y = 720 - 100 - 145;//*(n % 2);
     int end_y = start_y + 140 + 32;
     int start_x = off_x;//(n / 2);
     int end_x = start_x + 140;
@@ -194,12 +194,12 @@ static void drawEntry(menuEntry_s* me, int off_x, int is_active) {
             snprintf(tmpstr, sizeof(tmpstr)-1, "Version: %s", me->version);
             DrawText(interuiregular14, start_x + 256 + 64, start_y + 28 + 30 + 18 + 6, themeCurrent.textColor, tmpstr);  
                          
-            drawImage(1280 - 126 - 20, 720 - 48, 32, 32, themeCurrent.buttonAImage, IMAGE_MODE_RGBA32);
-            DrawText(interuimedium20, 1280 - 90 - 20, 720 - 47, themeCurrent.textColor, "Launch");
+            drawImage(1280 - 126 - 30, 720 - 48, 32, 32, themeCurrent.buttonAImage, IMAGE_MODE_RGBA32);
+            DrawText(interuimedium20, 1280 - 90 - 30, 720 - 47, themeCurrent.textColor, "Launch");
         }
         else {
-            drawImage(1280 - 126 - 20, 720 - 48, 32, 32, themeCurrent.buttonAImage, IMAGE_MODE_RGBA32);
-            DrawText(interuimedium20, 1280 - 90 - 20, 720 - 47, themeCurrent.textColor, "Open");
+            drawImage(1280 - 126 - 30, 720 - 48, 32, 32, themeCurrent.buttonAImage, IMAGE_MODE_RGBA32);
+            DrawText(interuimedium20, 1280 - 90 - 30, 720 - 47, themeCurrent.textColor, "Open");
         }
     }
 }
