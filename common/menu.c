@@ -195,11 +195,11 @@ static void drawEntry(menuEntry_s* me, int off_x, int is_active) {
             DrawText(interuiregular14, start_x + 256 + 64, start_y + 28 + 30 + 18 + 6, themeCurrent.textColor, tmpstr);  
                          
             drawImage(1280 - 126 - 30, 720 - 48, 32, 32, themeCurrent.buttonAImage, IMAGE_MODE_RGBA32);
-            DrawText(interuimedium20, 1280 - 90 - 30, 720 - 47, themeCurrent.textColor, "Launch");
+            DrawText(interuiregular18, 1280 - 90 - 30, 720 - 47, themeCurrent.textColor, "Launch");
         }
         else {
             drawImage(1280 - 126 - 30, 720 - 48, 32, 32, themeCurrent.buttonAImage, IMAGE_MODE_RGBA32);
-            DrawText(interuimedium20, 1280 - 90 - 30, 720 - 47, themeCurrent.textColor, "Open");
+            DrawText(interuiregular18, 1280 - 90 - 30, 720 - 47, themeCurrent.textColor, "Open");
         }
     }
 }
@@ -293,7 +293,7 @@ void menuLoop() {
 
     drawImage(40, 20, 140, 60, themeCurrent.hbmenuLogoImage, IMAGE_MODE_RGBA32);
     DrawText(interuiregular14, 180, 46, themeCurrent.textColor, "v2.0.0");
-    DrawText(interuiregular18, 40, 720 - 44, themeCurrent.textColor, menu->dirname);
+    DrawText(interuiregular18, 40, 720 - 47, themeCurrent.textColor, menu->dirname);
 
     //drawTime();
 
