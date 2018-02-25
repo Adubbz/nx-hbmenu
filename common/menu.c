@@ -244,7 +244,7 @@ color_t waveBlendAdd(color_t a, color_t b, float alpha) {
 
 void drawWave(int id, float timer, color_t color, int height, float phase, float speed) {
     int x, y;
-    float wave_top_y, alpha;
+    float wave_top_y, alpha, one_minus_alpha;
     color_t existing_color, new_color;
     
     height = 720 - height;
@@ -262,16 +262,19 @@ void drawWave(int id, float timer, color_t color, int height, float phase, float
                 existing_color = FetchPixelColor(x, y);
                 new_color = waveBlendAdd(existing_color, color, clamp(alpha, 0.0, 1.0) * 0.3);
             }      
-            else if (id == 2) { // darken closer to bottom of the front wave
-                new_color = frontWaveGradient[y];
-            }
-            else if (alpha >= 0.3) { // no anti-aliasing
-                new_color = color;
+            else if (alpha >= 0.3) { 
+                if (id == 2) {
+                    new_color = frontWaveGradient[y];
+                } 
+                else { // no anti-aliasing
+                    new_color = color;
+                }
             }
             else { // anti-aliasing
                 existing_color = FetchPixelColor(x, y);
                 alpha = fabs(alpha);
-                new_color = MakeColor(color.r * (1.0 - alpha) + existing_color.r * alpha, color.g * (1.0 - alpha) + existing_color.g * alpha, color.b * (1.0 - alpha) + existing_color.b * alpha, 255);
+                one_minus_alpha = (1.0 - alpha);
+                new_color = MakeColor(color.r * one_minus_alpha + existing_color.r * alpha, color.g * one_minus_alpha + existing_color.g * alpha, color.b * one_minus_alpha + existing_color.b * alpha, 255);
             }
 
             DrawPixelRaw(x, y, new_color);
