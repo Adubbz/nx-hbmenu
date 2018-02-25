@@ -261,12 +261,12 @@ void drawWave(int id, float timer, color_t color, int height, float phase, float
             if (themeCurrent.enableWaveBlending) {
                 existing_color = FetchPixelColor(x, y);
                 new_color = waveBlendAdd(existing_color, color, clamp(alpha, 0.0, 1.0) * 0.3);
+            }      
+            else if (id == 2) { // darken closer to bottom of the front wave
+                new_color = frontWaveGradient[y];
             }
             else if (alpha >= 0.3) { // no anti-aliasing
                 new_color = color;
-            }
-            else if (id == 2) { // darken closer to bottom of the front wave
-                new_color = frontWaveGradient[y];
             }
             else { // anti-aliasing
                 existing_color = FetchPixelColor(x, y);
