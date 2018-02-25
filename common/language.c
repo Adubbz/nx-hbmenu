@@ -214,6 +214,26 @@ const char* const g_strings[StrId_Max][16] =
         ),
     },
 
+    [StrId_AppInfo_Author] =
+    {
+        STR_EN("Author"),
+    },
+
+    [StrId_AppInfo_Version] =
+    {
+        STR_EN("Version"),
+    },
+
+    [StrId_Actions_Launch] =
+    {
+        STR_EN("Launch"),
+    },
+
+    [StrId_Actions_Open] =
+    {
+        STR_EN("Open"),
+    },
+
     /*[StrId_Reboot] =
     {
         STR_EN(
